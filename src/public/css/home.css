@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 body{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    background-color: #fff;
+    font-family: 'Lobster', cursive;
+    outline: none;
 }
-
 
 header{
     background-color: black;
@@ -17,17 +18,26 @@ header .header_container{
 }
 header .header_container a{
     margin: 5px 25px;
+    text-decoration: none;
     color: #fff;
     font-size: max(1.6rem, 2vw);
     background-color: rgba(240, 248, 255, 0);
 }
+
+header .header_container div button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: max(1.6rem, 2vw);
+    cursor: pointer;
+}
 header .background{
     background-image: url("../img/magic.jpg");
     background-repeat: no-repeat;
-    background-size: 50% 100%;
+    background-size: 40% 100%;
     background-position: center;
     height: 50vh;
-    width: 100vw;
+    width: 98vw;
     box-shadow: 1px 1px 10px #000;
 }
 header .background div{
@@ -36,25 +46,158 @@ header .background div{
     height: 100%;
 }
 
+header .background p{
+    height: 100%;
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: max(18px, 2vw);
+}
 section{
-    display: flex;
-    width: 95vw;
+    max-width: 90%;
     margin: 0 auto;
-    justify-content: center;
-}
-section .background div h2{
-    color: #fff;
-}
-section .section_container{
-    background-color: #fff;
-    color: #000;
-    margin-top: 50px;
     display: flex;
-    border-left: 1px solid #333;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+section h2{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #000;
+    width: 20vw;
+    margin: 25px auto;
+}
+section nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #000;
+    border-radius: 5px;
+}
+
+section nav .box{
+    font-size: 1.6rem;
+    padding: 25px;
+    width: 25vw;
+    height: 200px;
+    color: #000;
+}
+
+section nav .box a {
+    color: #000;
+}
+section nav div:nth-child(1){
+    background-color: rgb(255, 166, 0);
+}
+section nav div:nth-child(2){
+    background-color: red;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+section nav div:nth-child(3){
+    background-color: blueviolet;
+}
+
+section nav div:hover{
+    transition: 500ms;
+    box-shadow: 1px 1px 5px #333;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+section .sytemNotes{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+section form{
+    margin: 25px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 40%;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #333;
+    font-family:'Otomanopee One', sans-serif;
+}
+
+section form input{
+    width: max(250px, 20vw);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: max(1.6rem, 2vw);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #333;
+    padding: 0px 5px;
+    outline: none;
+}
+
+section form button{
+    border: none;
+    box-shadow: 2px 2px 5px #333;
+    background-color: blueviolet;
+    color: #fff;
+    width: 190px;
+    padding: 10px;
+    font-size: max(1.6rem, 2vw);
+    border-radius: 15px;
+    font-family: 'Otomanopee One', sans-serif;
+    margin: 10px ;
+    cursor: pointer;
+}
+
+section form h2{
+    font-size: 2rem;
+    box-shadow: none;
+}
+section form label{
+    font-size: 25px;
+}
+
+footer{
+    color: #fff;
+    font-size: 1.6rem;
+    width: 100%;
+}
 @media(max-width:600px){
-    header .background{
-        background-size: 100% 100%;
+    body{
+        overflow-x: hidden;
     }
+    header .background{
+        background-size: 90% 90%;
+    }
+    section h2{
+        width: 50vw;
+    }
+    section nav .box{
+        align-items: center;
+        padding: 0px;
+        width: 30vw;
+        height: 15vh;
+        font-size: 100%;
+    }
+    section form{
+        width: 70%;
+    }
+    section form input{
+        width: 100%;
+    }
+}
+
+.dark{
+    background: #333;
+}
+
+.white{
+    background-color: #fff;
 }

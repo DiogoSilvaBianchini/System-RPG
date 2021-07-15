@@ -13,9 +13,12 @@ html(lang="en")
         section 
             .container
                 form(action="/login", method="post")
-                    h2="Entre na taberna"  
+                    h2="Identifique-se"  
                     input(type="text", placeholder="Login", name="login")
-                    input(type="text", placeholder="Senha", name="password")
-                    button(type="submit")="Logar"
+                    input(type="password", placeholder="Senha", name="password")
+                    button(type="submit", id="btn_select")
+                        p(class="fas fa-paper-plane" id="select")=" Logar"
+                        p(class="fas fa-spinner block" id="load")
                     a(href="/register", class="button")="Criar uma conta "
         footer 
+        script(src="js/home.js") 

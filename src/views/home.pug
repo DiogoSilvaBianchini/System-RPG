@@ -2,23 +2,54 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/all.css")
-        link(rel="stylesheet", href="css/header.css")
-        link(rel="stylesheet", href="css/home.css")
-        link(rel="stylesheet", href="css/footer.css")
-        link(rel="stylesheet", href="css/animations.css")
-        title Home | RPG
-    body 
-        .container 
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/all.css")
+        link(rel="stylesheet" href="css/home.css")
+
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        title Salão principal
+    body(class="dark")
+        div(class="container init ")
             header 
                 .header_container
-                    a(href="/", class="fas fa-journal-whills")
-                    a(href="/login", class="fas fa-user-ninja")   
-                .background               
+                    a(href="")="<DB/>"
+                    div  
+                        button(class="fas fa-adjust" onclick="adjust()")
+                        a(href="/login" class="fas fa-user-ninja")
+                .background   
+                    p="Crie suas proprias aventuras"            
             section
-                .section_container 
+                h2="Bem-Vindo há Tirania"
+                nav 
                     div(class="box")
+                        a(href="/")  
+                            h3="Aventuras"
+                            <i class="fas fa-chess-rook"></i>
                     div(class="box")
+                        a(href="/") 
+                            h3="Dados"
+                            <i class="fas fa-dice-d20"></i> 
                     div(class="box")
+                        a(href="/")
+                            h3="Atualizações"
+                            <i class="fas fa-database"></i>
+                
+                form(action="/login" method="post" id="form")
+                    h2="Identifique-se"  
+                    label(for="login")="Login" 
+                    input(type="text" placeholder="ex: lord_marmota" name="login")
+                    label(for="login")="Senha" 
+                    input(type="password" placeholder="ex: coxinha123" name="password")
+                    button(type="submit" class=" fas fa-paper-plane")=" Logar"
+                    a(href="/register" class="button")="Criar uma conta " 
+                h2="Notas do sistema"
+                div(class="sytemNotes" id="sn")
+                    h3="Update 0.1 (beta)"
+                    p="+ Implementação do sistema de fichas"
+                    p="+ Implementação dos Dados 'd5, d10, d20' "
+                    p="+ Implementação do sistema de login basico"
+                    p="+ Mural de novidades"
+                footer 
+                    h6(class="fas fa-heart" id="note")="Created by: Diogo Bianchini"
+            script(src="js/home.js") 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/home.css"><link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Salão principal</title>
+  </head>
+  <body class="dark">
+    <div class="container init ">
+      <header> 
+        <div class="header_container"><a href="">&lt;DB/&gt;</a>
+          <div> 
+            <button class="fas fa-adjust" onclick="adjust()"></button><a class="fas fa-user-ninja" href="/login"></a>
+          </div>
+        </div>
+        <div class="background">  
+          <p>Crie suas proprias aventuras</p>
+        </div>
+      </header>
+      <section>
+        <h2>Bem-Vindo há Tirania</h2>
+        <nav> 
+          <div class="box"><a href="/"> 
+              <h3>Aventuras</h3><i class="fas fa-chess-rook"></i></a></div>
+          <div class="box"><a href="/"> 
+              <h3>Dados</h3><i class="fas fa-dice-d20"></i> </a></div>
+          <div class="box"><a href="/">
+              <h3>Atualizações</h3><i class="fas fa-database"></i></a></div>
+        </nav>
+        <h2>Entre na taberna</h2>
+        <form action="/login" method="post" id="form">
+          <input type="text" placeholder="Login" name="login">
+          <input type="password" placeholder="Senha" name="password">
+          <button type="submit">Logar</button><a class="button" href="/register">Criar uma conta </a>
+        </form>
+        <h2>Notas do sistema</h2>
+        <div class="sytemNotes" id="sn">
+          <h3>Update 0.1 (beta)</h3>
+          <p>+ Implementação do sistema de fichas</p>
+          <p>+ Implementação dos Dados 'd5, d10, d20' </p>
+          <p>+ Implementação do sistema de login basico</p>
+          <p>+ Mural de novidades</p>
+        </div>
+      </section>
+      <script src="js/home.js"> </script>
+    </div>
+  </body>
+</html>
